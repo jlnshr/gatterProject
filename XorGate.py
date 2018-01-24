@@ -4,7 +4,10 @@ from Gatter import *
 class XorGate(Gatter):
     def __init__(self, inputs, nor=False):
         super().__init__(inputs, nor)
-        self.type = "XOR"
+        if not nor:
+            self.type = "XOR"
+        elif nor:
+            self.type = "XNOR"
 
     def calc(self):
         check = 0

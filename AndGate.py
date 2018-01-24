@@ -3,7 +3,10 @@ from Gatter import *
 class AndGate(Gatter):
     def __init__(self, inputs, nor=False):
         super().__init__(inputs, nor)
-        self.type = "AND"
+        if not nor:
+            self.type = "AND"
+        elif nor:
+            self.type = "NAND"
 
     def calc(self):
         for inputstate in self.entrances:

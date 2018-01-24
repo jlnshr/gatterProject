@@ -4,7 +4,10 @@ from Gatter import Gatter
 class OrGate(Gatter):
     def __init__(self, inputs, nor=False):
         super().__init__(inputs, nor)
-        self.type = "OR"
+        if not nor:
+            self.type = "OR"
+        elif nor:
+            self.type = "NOR"
 
     def calc(self):
         for inputstate in self.entrances:
