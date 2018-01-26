@@ -10,8 +10,8 @@ class Gatter:
             self.entrances.append(False)
 
     def report(self):
-        print("Das Gatter hat {0} Eingänge und ist vom Typ {1}. Der Ausgangswert ist aktuell {2}"
-              .format(self.inputs, self.type, self.output))
+        print("Das Gatter hat %s Eingänge und ist vom Typ %s. Der Ausgangswert ist aktuell %s"
+              % (self.inputs, self.type, self.output))
 
     def get_entrances(self):
         return self.entrances
